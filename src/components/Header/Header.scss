@@ -1,0 +1,54 @@
+@import '../../variable';
+@import '../../mixins';
+
+.header {
+  @include default-width;
+  @include flex-between;
+  align-items: center;
+  padding: 7px;
+
+  &__title {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__item {
+    color: $header-color;
+    @include font-regular;
+  }
+
+  &__button {
+    background-color: $blue-primary;
+    color: $white-primary;
+    padding: 16px;
+    border-radius: 16px;
+    transition: background-color 200ms linear;
+    @include font-regular;
+
+    &:hover {
+      background-color: $blue-primary-hover;
+    }
+  }
+}
+
+@media (max-width: 920px) { 
+  .header {
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) { 
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

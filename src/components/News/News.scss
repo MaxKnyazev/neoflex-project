@@ -1,0 +1,10 @@
+@import '../../variable';
+@import '../../mixins';
+
+.news {
+  @include default-width;
+  @include flex-center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}

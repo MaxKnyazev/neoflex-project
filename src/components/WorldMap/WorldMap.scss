@@ -1,0 +1,36 @@
+@import '../../variable';
+@import '../../mixins';
+
+.world-map {
+  @include default-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: $black-secondary;
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__figcaption {
+    @include font-light;
+    margin-bottom: 48px;
+    text-align: center;
+    color: $black-secondary;
+  }
+
+  &__img {
+    width: 90%;
+  }
+}

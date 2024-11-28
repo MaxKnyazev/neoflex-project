@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.features {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 110px;
+  font-family: "Rubik", serif;
+}
+.features__img {
+  width: 500px;
+}
+.features__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.features__title {
+  font-weight: 500;
+  font-size: 35px;
+  color: #0B132A;
+}
+.features__text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #4F5665;
+}
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.features__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4F5665;
+}
+
+@media (max-width: 1220px) {
+  .features {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .features__info {
+    align-items: center;
+  }
+  .features__title {
+    text-align: center;
+  }
+  .features__text {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .features__img {
+    width: 300px;
+    max-width: 90%;
+  }
+}/*# sourceMappingURL=Features.css.map */
