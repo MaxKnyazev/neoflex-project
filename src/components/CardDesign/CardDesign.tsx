@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom';
 import './CardDesign.scss';
 import CardDesign1 from '@a/img/CardDesign1.png';
 import CardDesign2 from '@a/img/CardDesign2.png';
 import CardDesign3 from '@a/img/CardDesign3.png';
 import CardDesign4 from '@a/img/CardDesign4.png';
+
+const cards = [
+  { id: 1, src: CardDesign1, alt: 'CardDesign1'},
+  { id: 2, src: CardDesign2, alt: 'CardDesign2'},
+  { id: 3, src: CardDesign3, alt: 'CardDesign3'},
+  { id: 4, src: CardDesign4, alt: 'CardDesign4'}
+]
 
 export const CardDesign: React.FC = () => {
   return (
@@ -13,18 +19,13 @@ export const CardDesign: React.FC = () => {
         <button className="card-design__button">Choose the card</button>
       </div>
       <ul className="card-design__list">
-        <li className="card-design__item">
-          <img src={CardDesign1} alt="CardDesign1" />
-        </li>
-        <li className="card-design__item">
-          <img src={CardDesign2} alt="CardDesign2" />
-        </li>
-        <li className="card-design__item">
-          <img src={CardDesign3} alt="CardDesign3" />
-        </li>
-        <li className="card-design__item">
-          <img src={CardDesign4} alt="CardDesign4" />
-        </li>
+        {cards.map(card => {
+          return (
+            <li key={card.id} className="card-design__item">
+              <img src={card.src} alt={card.alt} />
+            </li>
+          )
+        })}
       </ul>
     </section>
   );

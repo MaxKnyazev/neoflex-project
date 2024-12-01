@@ -1,5 +1,13 @@
-import { Link } from 'react-router-dom';
 import './Course.scss';
+
+const courses = [
+  { id: 1, name: 'USD', course: '60.78' },
+  { id: 2, name: 'USD', course: '60.78' },
+  { id: 3, name: 'USD', course: '60.78' },
+  { id: 4, name: 'USD', course: '60.78' },
+  { id: 5, name: 'USD', course: '60.78' },
+  { id: 6, name: 'USD', course: '60.78' },
+]
 
 export const Course: React.FC = () => {
   return (
@@ -10,30 +18,14 @@ export const Course: React.FC = () => {
         <h2 className="course__title">Exchange rate in internet bank</h2>
         <span className="course__currency">Currency</span>
         <ul className="course__prices">
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
-          <li className="course__price">
-            <span className="course__price-title">USD:</span>
-            60.78
-          </li>
+          {courses.map(course => {
+            return (
+              <li key={course.id} className="course__price">
+                <span className="course__price-title">{course.name}:</span>
+                {course.course}
+              </li>
+            )
+          })}
         </ul>
       </div>
       <div className="course__additional">

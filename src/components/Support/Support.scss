@@ -5,7 +5,7 @@
 .support {
   @include default-width;
   @include flex-center;
-  flex-direction: column;
+  @include flex-column;
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 60px;
@@ -46,9 +46,20 @@
     @include flex-center;
   }
 
+  &__email {
+    @include flex-center;
+  }
+
   &__svg {
-    width: 29px;
-    height: 38px;
+    &-email {
+      width: 29px;
+      height: 38px;
+    }
+
+    &-send {
+      width: 30px;
+      height: 40px;
+    }
   }
 
   &__input {
@@ -81,13 +92,10 @@
 @media (max-width: 520px) { 
   .support {  
     &__form {
-      flex-direction: column;
-      gap: 15px;
+      padding: 10px;
     }
   
     &__input {
-      // max-width: 90%;
-      // font-size: 16px;
       width: 200px;
 
       &::placeholder {
@@ -96,11 +104,22 @@
     }
 
     &__svg {
+      &-send {
+        width: 20px;
+        height: 30px;
+      }
 
+      &-email {
+        width: 24px;
+        height: 33px;
+      }
     }
   
     &__button {
-
+      padding: 5px 10px;
+      &-text {
+        display: none;
+      }
     }
   }
 }

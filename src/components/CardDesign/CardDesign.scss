@@ -2,9 +2,9 @@
 @import '../../mixins';
 
 .card-design {
-  margin-top: 130px;
   @include default-width;
   @include flex-between;
+  margin-top: 130px;
   gap: 160px;
   padding: 0 20px;
 

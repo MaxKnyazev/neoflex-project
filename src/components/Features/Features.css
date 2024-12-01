@@ -8,6 +8,11 @@
   margin-top: 110px;
   font-family: "Rubik", serif;
 }
+@media (max-width: 1300px) {
+  .features {
+    width: 95%;
+  }
+}
 .features__img {
   width: 500px;
 }

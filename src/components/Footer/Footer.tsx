@@ -2,6 +2,19 @@ import { Link } from 'react-router-dom';
 import './Footer.scss';
 import NeoflexLogo from '@a/img/NeoflexLogo.png';
 
+const links = [
+  { id: 1, to: '/', text: 'About bank' },
+  { id: 2, to: '/', text: 'Ask a Question' },
+  { id: 3, to: '/', text: 'Quality of service' },
+  { id: 4, to: '/', text: 'Requisites' },
+  { id: 5, to: '/', text: 'Press center' },
+  { id: 6, to: '/', text: 'Bank career' },
+  { id: 7, to: '/', text: 'Investors' },
+  { id: 8, to: '/', text: 'Analytics' },
+  { id: 9, to: '/', text: 'Business and processes' },
+  { id: 10, to: '/', text: 'Compliance and business ethics' },
+]
+
 export const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -17,45 +30,11 @@ export const Footer: React.FC = () => {
 
         <nav className="footer__nav">
           <ul className="footer__list">
-            <Link to='/'>
-              <li className="footer__item">About bank</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Ask a Question</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Quality of service</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Requisites</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Press center</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Bank career</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Investors</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Analytics</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Business and processes</li>
-            </Link>
-
-            <Link to='/'>
-              <li className="footer__item">Compliance and business ethics</li>
-            </Link>
+            {links.map(link => (
+              <Link key={link.id} to={link.to}>
+                <li className="footer__item">{link.text}</li>
+              </Link>
+            ))}
           </ul>
         </nav>
 

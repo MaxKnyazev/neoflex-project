@@ -5,11 +5,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 60px;
   margin-bottom: 100px;
+}
+@media (max-width: 1300px) {
+  .support {
+    width: 95%;
+  }
 }
 .support__title {
   color: #EB801D;
@@ -44,9 +50,18 @@
   justify-content: center;
   align-items: center;
 }
-.support__svg {
+.support__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.support__svg-email {
   width: 29px;
   height: 38px;
+}
+.support__svg-send {
+  width: 30px;
+  height: 40px;
 }
 .support__input {
   height: 30px;
@@ -80,8 +95,7 @@
 
 @media (max-width: 520px) {
   .support__form {
-    flex-direction: column;
-    gap: 15px;
+    padding: 10px;
   }
   .support__input {
     width: 200px;
@@ -91,5 +105,19 @@
   }
   .support__input::placeholder {
     text-align: center;
+  }
+  .support__svg-send {
+    width: 20px;
+    height: 30px;
+  }
+  .support__svg-email {
+    width: 24px;
+    height: 33px;
+  }
+  .support__button {
+    padding: 5px 10px;
+  }
+  .support__button-text {
+    display: none;
   }
 }/*# sourceMappingURL=Support.css.map */

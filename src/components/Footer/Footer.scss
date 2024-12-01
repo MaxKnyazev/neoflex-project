@@ -8,9 +8,8 @@
   @include flex-center;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    @include flex-column;
+    @include flex-between;
     gap: 35px;
     @include default-width;
     padding: 90px 5px;
@@ -27,8 +26,7 @@
   }
 
   &__contacts {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: flex-start;
     gap: 5px;
   }

@@ -3,8 +3,7 @@
 
 .world-map {
   @include default-width;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
   margin-top: 48px;
 
@@ -18,8 +17,7 @@
   }
 
   &__figure {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
   }
 
