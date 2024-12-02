@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.support {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1300px) {
+  .support {
+    width: 95%;
+  }
+}
+.support__title {
+  color: #EB801D;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.support__text {
+  color: #1C1C1E;
+  font-size: 30px;
+  text-align: center;
+}
+.support__text--light {
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.support__text--bold {
+  font-weight: 700;
+}
+.support__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1019607843);
+  border-radius: 20px;
+  padding: 20px;
+}
+.support__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.support__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.support__svg-email {
+  width: 29px;
+  height: 38px;
+}
+.support__svg-send {
+  width: 30px;
+  height: 40px;
+}
+.support__input {
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  padding-left: 10px;
+}
+.support__input::-moz-placeholder {
+  color: #9092B0;
+  font-family: "Nunito Sans", sans-serif;
+}
+.support__input::placeholder {
+  color: #9092B0;
+  font-family: "Nunito Sans", sans-serif;
+}
+.support__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 30px 5px 15px;
+  background-color: #686DF1;
+  color: #FFFFFF;
+  border-radius: 20px;
+  transition: background-color 200ms linear;
+}
+.support__button:hover {
+  background-color: #595ddd;
+}
+
+@media (max-width: 520px) {
+  .support__form {
+    padding: 10px;
+  }
+  .support__input {
+    width: 200px;
+  }
+  .support__input::-moz-placeholder {
+    text-align: center;
+  }
+  .support__input::placeholder {
+    text-align: center;
+  }
+  .support__svg-send {
+    width: 20px;
+    height: 30px;
+  }
+  .support__svg-email {
+    width: 24px;
+    height: 33px;
+  }
+  .support__button {
+    padding: 5px 10px;
+  }
+  .support__button-text {
+    display: none;
+  }
+}/*# sourceMappingURL=Support.css.map */

@@ -1,0 +1,13 @@
+@import '../../variable';
+@import '../../mixins';
+
+.layout {
+  background-color: $background-primary;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+
+  @include flex-column;
+  @include flex-between;
+  align-items: center;
+}
