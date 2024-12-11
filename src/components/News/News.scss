@@ -23,14 +23,14 @@
     flex-direction: column;
     gap: 32px;
     padding: 32px;
-    background-color: #fff;
+    background-color: $white-primary;
     border-radius: 28px;
     box-shadow: 0px 2px 4px 0px #00000033;
     border-image-source: linear-gradient(0deg, rgba(187, 187, 187, 0.08), rgba(187, 187, 187, 0.08)),
   }
 
   &__img {
-    background-color: #afafaf;
+    background-color: $grey-primary;
     width: 256px;
     height: 120px;
   }
@@ -43,9 +43,8 @@
   }
 
   &__text {
-    font-size: 16px;
+    @include font-light;
     line-height: 23px;
-    font-weight: 500;
     text-align: center;
   }
 
@@ -61,30 +60,30 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: #003CFF;
-    border: 1px solid #003CFF;
+    background-color: $blue-primary;
+    border: 1px solid $blue-primary;
     cursor: pointer;
     transition: background 200ms linear;
 
     &:hover {
-      background-color: #3060ff;
+      background-color: $blue-primary-hover;
     }
 
     &--inactive {
-      background-color: #fff;
+      background-color: $white-primary;
       cursor: not-allowed;
 
       &:hover {
-        background-color: #fff;
+        background-color: $white-primary;
       }
 
       & .slider__svg {
-        stroke: black;
+        stroke: $black-primary;
       }
     }
   }
 
   &__svg {
-    stroke: #fff;
+    stroke: $white-primary;
   }
 }

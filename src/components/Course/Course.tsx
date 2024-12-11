@@ -14,16 +14,12 @@ export const Course: React.FC = () => {
 
   const API_KEY = 'c599d807909f15d01e1f1a89';
   const BASE_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}`;
+  const INTERVAL_TIME = 15 * 60 * 1000; // 15 minutes
   
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.request(
-          {
-            method: 'GET',
-            url: `${BASE_URL}/latest/RUB`,
-          }
-        );
+        const response = await axios.get(`${BASE_URL}/latest/RUB`);
         return response.data;
       } catch (error) {
         console.error(error);
@@ -32,50 +28,20 @@ export const Course: React.FC = () => {
 
     const fetchData = async () => {
       const data = await getData();
-      setRates([
-        {
-          id: 1,
-          title: 'EUR',
-          price: data?.conversion_rates.EUR,
-        },
-
-        {
-          id: 2,
-          title: 'USD',
-          price: data?.conversion_rates.USD,
-        },
-
-        {
-          id: 3,
-          title: 'BMD',
-          price: data?.conversion_rates.BMD          ,
-        },
-
-        {
-          id: 4,
-          title: 'ERN',
-          price: data?.conversion_rates.ERN          ,
-        },
-
-        {
-          id: 5,
-          title: 'LKR',
-          price: data?.conversion_rates.LKR,
-        },
-
-        {
-          id: 6,
-          title: 'HTG',
-          price: data?.conversion_rates.HTG,
-        },
-      ]);
+      const currencies = ['EUR', 'USD', 'BMD', 'ERN', 'LKR', 'HTG'];
+  
+      setRates(currencies.map((currency, index) => ({
+        id: index + 1,
+        title: currency,
+        price: data?.conversion_rates[currency],
+      })));
     }
     fetchData();
 
     const intervalUpdate = setInterval(() => {
       fetchData();
       setDate(new Date());
-    }, 15 * 60 * 1000);
+    }, INTERVAL_TIME);
     
     return () => clearInterval(intervalUpdate);
   }, [])
