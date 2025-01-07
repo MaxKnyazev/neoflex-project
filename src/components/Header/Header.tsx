@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const links = [
-  { id: 1, to: '/', text: 'Credit card' },
+  { id: 1, to: '/loanpage', text: 'Credit card' },
   { id: 2, to: '/', text: 'Product' },
   { id: 3, to: '/', text: 'Account' },
   { id: 4, to: '/', text: 'Resources' },
