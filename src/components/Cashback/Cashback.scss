@@ -4,6 +4,7 @@
 .cashback {
   @include default-width;
   @include flex-between;
+  margin-top: 32px;
   margin-bottom: 48px;
 
   &__list {

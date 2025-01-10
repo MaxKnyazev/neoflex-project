@@ -46,21 +46,22 @@ export const LoanForm: React.FC = () => {
     setAmount(event.target.value);
   }
 
-  //!!! const validateDate = (value: Date) => {
-  //   if (!value) {
-  //     // return "Пожалуйста, укажите дату рождения";
-  //     return false;
-  //   }
+  const validateDate = (value: string) => {
+    const dateValue = new Date(value);
+    console.log(12312312312)
+    console.log(dateValue);
+    if (!dateValue) {
+      return "Incorrect date of birth";
+    }
 
-  //   const eighteenYearsAgo = new Date();
-  //   eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
-  //   if (value < eighteenYearsAgo) {
-  //     // return "Вы должны быть старше 18 лет";
-  //     return false;
-  //   }
+    const eighteenYearsAgo = new Date();
+    eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+    if (dateValue > eighteenYearsAgo) {
+      return "Incorrect date of birth";
+    }
 
-  //   return true;
-  //!!! };
+    return true;
+  };
 
   return (
     <>
@@ -118,7 +119,13 @@ export const LoanForm: React.FC = () => {
                     type="text" 
                     className={errors.lastName?.message ? "loan-form__contact-input loan-form__contact-input--incorrect" : "loan-form__contact-input"} 
                     placeholder="For Example Doe" 
-                    {...register("lastName", {required: {value: true, message: 'Enter your last name'}, minLength: 1})}
+                    {...register("lastName", {
+                      required: {
+                        value: true, 
+                        message: 'Enter your last name'
+                      }, 
+                      minLength: 1
+                    })}
                   />
 
                   {errors.lastName?.message && (
@@ -240,7 +247,7 @@ export const LoanForm: React.FC = () => {
                         value: true,
                         message: "Date of Birth is required"
                       },
-                      //!!! validate: ((event) => validateDate(event.value))
+                      validate: ((date) => validateDate(date))
                     })}
                   />
 

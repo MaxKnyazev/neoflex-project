@@ -3,6 +3,7 @@
 
 .faq {
   @include default-width;
+  margin-top: 32px;
 
   &__title {
     @include font-medium;

@@ -4,6 +4,7 @@
 .about-card {
   @include default-width;
   @include flex-between;
+  margin-top: 32px;
   margin-bottom: 96px;
 
   &__list {

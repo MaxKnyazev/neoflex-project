@@ -22,10 +22,6 @@
     @include font-light;
     text-align: left;
     padding: 24px 60px 20px 0;
-
-    &--first {
-      padding: 0px 60px 20px 0 !important;
-    }
   }
 
   &__body {
@@ -34,9 +30,5 @@
     color: $light-black-tertiary;
     padding-right: 50px;
     padding-top: 24px;
-
-    &--first {
-      padding-top: 0;
-    }
   }
 }
