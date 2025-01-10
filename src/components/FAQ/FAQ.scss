@@ -1,0 +1,15 @@
+@import '../../variable';
+@import '../../mixins';
+
+.faq {
+  @include default-width;
+
+  &__title {
+    @include font-medium;
+    margin: 32px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

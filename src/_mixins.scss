@@ -40,6 +40,11 @@
   }
 }
 
+@mixin font-medium {
+  font-weight: 700;
+  font-size: 30px;
+}
+
 @mixin font-regular {
   font-weight: 700;
   font-size: 16px;

@@ -1,0 +1,42 @@
+@import '../../variable';
+@import '../../mixins';
+
+.rates {
+  @include default-width;
+  @include flex-between;
+  position: relative;
+  
+  &__table {
+    border-collapse: collapse;
+  }
+
+  &__row {
+    border-bottom: 1px solid $blue-tertiary;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__head {
+    @include font-light;
+    text-align: left;
+    padding: 24px 60px 20px 0;
+
+    &--first {
+      padding: 0px 60px 20px 0 !important;
+    }
+  }
+
+  &__body {
+    @include font-light;
+    @include flex-column;
+    color: $light-black-tertiary;
+    padding-right: 50px;
+    padding-top: 24px;
+
+    &--first {
+      padding-top: 0;
+    }
+  }
+}
