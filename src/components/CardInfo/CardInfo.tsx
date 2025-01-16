@@ -2,6 +2,11 @@ import './CardInfo.scss';
 import CardDesign1 from '@a/img/CardDesign1.jpg';
 
 export const CardInfo: React.FC = () => {
+  const advantages = [
+    { title: 'Up to 160 days', text: 'No percent' },
+    { title: 'Up to 600 000 ₽', text: 'Credit limit' },
+    { title: '0 ₽', text: 'Card service is free' },
+  ];
 
   return (
     <section className="card-info">
@@ -13,20 +18,12 @@ export const CardInfo: React.FC = () => {
         </p>
 
         <ul className="card-info__advantages">
-          <li className="card-info__advantage">
-            <span className="card-info__advantage-title">Up to 160 days</span>
-            <span className="card-info__advantage-text">No percent</span>
-          </li>
-
-          <li className="card-info__advantage">
-            <span className="card-info__advantage-title">Up to 600 000 &#8381;</span>
-            <span className="card-info__advantage-text">Credit limit</span>
-          </li>
-
-          <li className="card-info__advantage">
-            <span className="card-info__advantage-title">0 &#8381;</span>
-            <span className="card-info__advantage-text">Card service is free</span>
-          </li>
+          {advantages.map((advantage, index) => (
+            <li key={index} className="card-info__advantage">
+              <span className="card-info__advantage-title">{advantage.title}</span>
+              <span className="card-info__advantage-text">{advantage.text}</span>
+            </li>
+          ))}
         </ul>
 
         <div>
