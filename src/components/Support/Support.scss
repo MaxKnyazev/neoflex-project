@@ -34,92 +34,17 @@
     }
   }
 
-  &__form {
-    @include flex-center;
-    background-color: $white-primary;
-    box-shadow: 0px 10px 20px 0px #363A781A;
-    border-radius: 20px;
-    padding: 20px;
-  }
-
-  &__wrapper {
-    @include flex-center;
-  }
-
-  &__email {
-    @include flex-center;
-  }
-
-  &__svg {
-    &-email {
-      width: 29px;
-      height: 38px;
-    }
-
-    &-send {
-      width: 30px;
-      height: 40px;
-    }
-  }
-
-  &__input {
-    height: 30px;
-    font-size: 20px;
-    border: none;
-    padding-left: 10px;
-
-    &::placeholder {
-      color: $grey-secondary;
-      font-family: "Nunito Sans", sans-serif;
-    }
-  }
-
   &__button {
     @include flex-center;
     @include font-regular;
-    padding: 5px 30px 5px 15px;
+    padding: 20px;
     background-color: $blue-secondary;
     color: $white-primary;
-    border-radius: 20px;
+    border-radius: 15px;
     transition: background-color 200ms linear;
 
     &:hover {
       background-color: $blue-secondary-hover;
-    }
-  }
-}
-
-@media (max-width: 520px) { 
-  .support {  
-    &__form {
-      padding: 10px;
-    }
-  
-    &__input {
-      width: 200px;
-
-      &::placeholder {
-        text-align: center;
-      }
-    }
-
-    &__svg {
-      &-send {
-        width: 20px;
-        height: 30px;
-      }
-
-      &-email {
-        width: 24px;
-        height: 33px;
-      }
-    }
-  
-    &__button {
-      padding: 5px 10px;
-      &-text {
-        display: none;
-      }
     }
   }
 }

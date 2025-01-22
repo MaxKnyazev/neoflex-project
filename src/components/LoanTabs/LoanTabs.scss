@@ -1,0 +1,36 @@
+@import '../../variable';
+@import '../../mixins';
+
+.loan-tabs {
+  @include default-width;
+  @include flex-between;
+  margin-top: 50px;
+  position: relative;
+  
+
+  &__list {
+    @include flex-center;
+    
+  }
+
+  &__button {
+    @include font-light;
+    color: $light-black-quaternary;
+    padding: 12px 16px;
+    position: relative;
+    z-index: 2;
+
+    &--active {
+      border-bottom: 2px solid $light-black-quaternary;
+    }
+  }
+
+  &__underline {
+    @include default-width;
+    height: 2px;
+    background-color: $grey-tertiary;
+    position: absolute;
+    top: calc(100% - 2px);
+    z-index: 1;
+  }
+}

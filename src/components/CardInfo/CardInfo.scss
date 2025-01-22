@@ -1,0 +1,117 @@
+@import '../../variable';
+@import '../../mixins';
+
+.card-info {
+  @include default-width;
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 32px;
+  box-shadow: 0px 2px 4px 0px #00000033;
+  background: linear-gradient(180.8deg, rgba(203, 213, 224, 0.624) 34.33%, rgba(254, 235, 200, 0.56) 64.27%);
+  border-radius: 28px;
+
+  &__wrapper {
+    @include flex-column;
+    gap: 32px;
+  }
+
+  &__title {
+    color: $white-primary;
+    @include font-large;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__explain {
+    @include font-light;
+    color: $light-black-primary;
+  }
+
+  &__img {
+    border-radius: 20px;
+    max-width: 380px;
+    height: 100%;
+    margin-right: 90px;
+  }
+
+  &__advantages {
+    @include flex-between;
+    flex-wrap: wrap;
+  }
+
+  &__advantage {
+    @include flex-column;
+
+    &-title {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 20px;
+      color: $light-black-tertiary;
+    }
+
+    &-text {
+      @include font-light;
+      color: $light-black-tertiary;
+    }
+  }
+
+  &__button {
+    background-color: $blue-primary;
+    color: $white-primary;
+    padding: 16px;
+    border-radius: 16px;
+    transition: background-color 200ms linear;
+    @include font-regular;
+
+    &:hover {
+      background-color: $blue-primary-hover;
+    }
+  }
+}
+
+@media (max-width: 1250px) { 
+  .card-info {
+    &__img {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 1150px) { 
+  .card-info {
+    @include flex-center;
+
+    &__wrapper {
+      @include flex-center;
+    }
+    &__explain {
+      text-align: center;
+    }
+
+    &__advantages {
+      @include flex-center;
+      column-gap: 32px;
+      row-gap: 20px;
+    }
+
+    &__advantage {
+      @include flex-center;
+    }
+  }
+}
+
+@media (max-width: 500px) { 
+  .card-info {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 500px) { 
+  .card-info {
+    &__img {
+      width: 90%;
+    }
+  }
+}

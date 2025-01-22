@@ -23,6 +23,28 @@
   flex-direction: column;
 }
 
+@mixin font-large {
+  font-weight: 700;
+  font-size: 48px;
+
+  @media (max-width: 900px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
+}
+
+@mixin font-medium {
+  font-weight: 700;
+  font-size: 30px;
+}
+
 @mixin font-regular {
   font-weight: 700;
   font-size: 16px;
@@ -31,11 +53,4 @@
 @mixin font-light {
   font-weight: 500;
   font-size: 16px;
-}
-
-@media (max-width: 1300px) {
-  @mixin default-width {
-    max-width: 1300px;
-    width: 95%;
-  }
 }

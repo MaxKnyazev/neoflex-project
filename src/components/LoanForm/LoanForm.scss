@@ -1,0 +1,185 @@
+@import '../../variable';
+@import '../../mixins';
+
+.loan-form {
+  @include default-width;
+  @include flex-column;
+  background-color: $white-primary;
+  padding: 32px;
+  margin-bottom: 96px;
+  border-radius: 28px;
+  box-shadow: 0px 2px 4px 0px #00000033;
+
+  &__customize {
+    display: flex;
+    justify-content: flex-start;
+    gap: 42px;
+    margin-bottom: 32px;
+
+    &-title {
+      @include font-medium;
+      color: $black-primary;
+    }
+
+    &-wrapper {
+      border-right: 1px dashed #80808066;
+      padding-right: 42px;
+    }
+  }
+
+  &__select {
+    @include flex-column;
+    padding: 24px;
+    border: 1px solid $blue-quaternary;
+    border-radius: 10px;
+
+    &-text {
+      @include font-light;
+      margin-bottom: 20px;
+    }
+
+    &-range {
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      width: 520px;
+      margin-bottom: 10px;
+
+      &::-webkit-slider-runnable-track {
+        background-color: $white-tertiary;
+        height: 2px;  
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+         appearance: none;
+         margin-top: -11px;
+         background-color: $blue-quaternary;
+         height: 24px;
+         width: 24px;
+         border-radius: 50%
+      }
+    }
+
+    &-limits {
+      @include flex-between;
+      margin-bottom: 16px;
+    }
+
+    &-limit {
+      @include font-light;
+      color: #786D6D;
+    }
+  }
+
+  &__amount {
+    &-title {
+      font-weight: 700;
+      font-size: 20px;
+      color: $black-primary;
+      margin-bottom: 16px;
+    }
+
+    &-number {
+      @include font-light;
+      color: $black-primary;
+    }
+
+    &-underline {
+      height: 1px;
+      width: 80%;
+      background-color: #80808033;
+      margin-top: 10px;
+    }
+  }
+
+  &__header {
+    @include flex-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__step {
+    @include font-light;
+    color: $black-primary;
+  }
+
+  &__contact {
+    @include flex-column;
+    gap: 16px;
+
+    &-wrapper {
+      @include flex-between;
+    }
+    
+    &-title {
+      margin-bottom: 26px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &-label {
+      @include flex-column;
+    }
+
+    &-text {
+      margin-bottom: 8px;
+    }
+
+    &-required {
+      color: $red-primary;
+    }
+
+    &-field {
+      @include flex-center;
+      position: relative;
+    }
+
+    &-input {
+      width: 300px;
+      padding: 13px 16px;
+      background-color: $orange-secondary;
+      border: 1px solid $orange-tertiary;
+      border-radius: 6px;
+
+      &--incorrect {
+        border: 2px solid $red-secondary;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      right: 10px;
+    }
+
+    &-error {
+      @include font-light;
+      color: $red-secondary;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: end;
+    margin-top: 24px;
+  }
+
+  &__button {
+    background-color: $blue-primary;
+    color: $white-primary;
+    padding: 16px 38px;
+    border-radius: 8px;
+    transition: background-color 200ms linear;
+    @include font-regular;
+
+    &:hover {
+      background-color: $blue-primary-hover;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .loan-form {
+
+  }
+}

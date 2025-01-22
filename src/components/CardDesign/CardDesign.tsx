@@ -1,8 +1,8 @@
 import './CardDesign.scss';
-import CardDesign1 from '@a/img/CardDesign1.png';
-import CardDesign2 from '@a/img/CardDesign2.png';
-import CardDesign3 from '@a/img/CardDesign3.png';
-import CardDesign4 from '@a/img/CardDesign4.png';
+import CardDesign1 from '@a/img/CardDesign1.jpg';
+import CardDesign2 from '@a/img/CardDesign2.jpg';
+import CardDesign3 from '@a/img/CardDesign3.jpg';
+import CardDesign4 from '@a/img/CardDesign4.jpg';
 
 const cards = [
   { id: 1, src: CardDesign1, alt: 'CardDesign1'},

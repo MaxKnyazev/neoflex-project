@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 import { HomePage } from '@p/HomePage';
-import { SecondPage } from '@p/SecondPage';
+import { LoanPage } from '@p/LoanPage';
 import { NoMatch } from '@c/NoMatch';
 import { Layout } from '@c/Layout';
 
@@ -10,7 +10,7 @@ export const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: '/secondpage', element: <SecondPage />, },
+      { path: '/loanpage', element: <LoanPage />, },
       { path: '*', element: <NoMatch /> },
     ],
   },

@@ -1,0 +1,62 @@
+@import '../../variable';
+@import '../../mixins';
+
+.get-card {
+  @include default-width;
+  @include flex-column;
+  align-items: center;
+  margin: 48px 0;
+
+  &__title {
+    @include font-medium;
+    color: $black-primary;
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    @include flex-between;
+    gap: 50px;
+  }
+
+  &__item {
+    @include flex-column;
+  }
+
+  &__order {
+    @include flex-center;
+    gap: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__number {
+    @include flex-center;
+    font-weight: 700;
+    font-size: 20px;
+
+    width: 48px;
+    height: 48px;
+    background-color: $grey-quaternary;
+    border-radius: 50%;
+  }
+
+  &__underline {
+    height: 2px;
+    width: calc(100% - 48px - 36px);
+    background-color: $grey-quaternary;
+  }
+
+  &__text {
+    @include font-light;
+    color: $black-primary;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1050px) { 
+  .get-card {  
+    &__list {
+      flex-wrap: wrap;
+      justify-content: start;
+    }  
+  }
+}

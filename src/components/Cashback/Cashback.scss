@@ -1,0 +1,45 @@
+@import '../../variable';
+@import '../../mixins';
+
+.cashback {
+  @include default-width;
+  @include flex-between;
+  margin-top: 32px;
+  margin-bottom: 48px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+  }
+
+  &__item {
+    background-color: $white-secondary;
+    @include flex-column;
+    justify-content: space-between;
+    min-height: 160px;
+    padding: 32px;
+    gap: 16px;
+    box-shadow: 0px 2px 4px 0px #00000033;
+    border-radius: 28px;
+
+    &:nth-child(even) {
+      background-color: $grey-quinary;
+    }
+  }
+
+  &__svg {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    @include font-medium;
+    color: $black-primary;
+  }
+
+  &__text {
+    @include font-light;
+    color: $light-black-secondary;
+  }
+}
